@@ -10,7 +10,7 @@ in this project.  Any common changes should be included in this docker project.
 To build this image:
 
     cd /path/to/dockerfile/location
-    docker build --rm=true  --tag=/some/tag/centos7 -f centos7.dockerfile .
+    docker build --rm=true  --tag=some/tag/centos7 -f centos7.dockerfile .
 
 > **NOTE** As this is a mw/base project, it is recommended to version this as such.  The global centos:centos7 project has the
 > version of centos built in.  For the *mw/base/centos* project, you are versioning our custom version of centos7 so any changes
