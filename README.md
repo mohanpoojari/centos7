@@ -9,6 +9,7 @@ in this project.  Any common changes should be included in this docker project.
 
 To build this image:
 
+    cd /path/to/dockerfile/location
     docker build --rm=true  --tag=/some/tag/centos7 -f centos7.dockerfile .
 
 > **NOTE** As this is a mw/base project, it is recommended to version this as such.  The global centos:centos7 project has the
@@ -20,6 +21,12 @@ To build this image:
 This image is not normally run on it's own, however it is essentially the centos:centos7 image
 so any command in that build can be invoked, such as bash below
 
-    docker run -d --init /some/tag/centos7 /bin/bash
+    docker run -d --init --name somename --hostname somehostname /some/tag/centos7 /bin/bash
 
-[back](../README.md) 
+[back](./README.md) 
+
+## Connecting
+
+In order to connect to your running container, simply execute the following command:
+
+    docker exec -it somename /bin/bash
