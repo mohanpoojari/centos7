@@ -21,12 +21,12 @@ To build this image:
 This image is not normally run on it's own, however it is essentially the centos:centos7 image
 so any command in that build can be invoked, such as bash below
 
-    docker run -d --init --name somename --hostname somehostname /some/tag/centos7 /bin/bash
-
-[back](./README.md) 
+    docker run -d --init --name somename --hostname somehostname some/tag/centos7 /bin/bash
 
 ## Connecting
 
 In order to connect to your running container, simply execute the following command:
 
     docker exec -it somename /bin/bash
+
+[back](./README.md) 
